@@ -3,7 +3,7 @@
 cd $(dirname "$0")
 
 gpg --import key/store{,.pub}
-gpg --edit-key azure.satellite@gmail.com trust quit
+gpg --edit-key $(cat .gpg-id) trust quit
 export PASSWORD_STORE_DIR=$PWD
 
 pass git remote add origin git@github.com:stellarhoof/pass.git
